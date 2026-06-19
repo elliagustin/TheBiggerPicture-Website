@@ -1,9 +1,11 @@
 const dictionaryData = [
   {
-    concept: "Backtest",
-    definition: "A test of a trading strategy using historical data to understand how it would have behaved in the past.",
-    videoTitle: "Episode 1 - Building the First Trading Model",
-    videoUrl: "https://youtube.com/",
+    concept: "Division en train y validation",
+    definition: `Es una buena pratica dividir el dataset en dos partes: Train Dataset y Validation Dataset (o tres: +Test). 
+	Train se usa para entrenar los modelos, mientras que validation se usa para evaluarlos.
+	Proporciones comunes son 80%-20%`,
+    videoTitle: "Episodio 1 - Primer Modelo XGB vs. Modelo random",
+    videoUrl: "https://youtu.be/IVkVVSHNs18?t=509",
     comment: "Useful for explaining why past performance is only a starting point, not proof of future profitability."
   },
   {
