@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dictionary | The Bigger Picture</title>
+  
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="dictionary-page">
+
+    <header class="dictionary-header">
+      <h1>Dictionary</h1>
+      <p>
+        A living glossary of concepts, definitions, videos, and notes from The Bigger Picture project.
+      </p>
+
+      <a href="index.html">← Back to Home</a>
+    </header>
+
+    <section class="dictionary-controls">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search concept, definition, video, or comment..."
+      />
+    </section>
+
+    <section class="dictionary-table-section">
+      <table class="dictionary-table">
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>Definition</th>
+            <th>Video</th>
+            <th>Comment</th>
+          </tr>
+        </thead>
+        <tbody id="dictionaryTableBody">
+          <!-- Rows inserted by JavaScript -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="dictionary-data.js"></script>
+
+  <script>
+    const tableBody = document.getElementById("dictionaryTableBody");
+    const searchInput = document.getElementById("searchInput");
+
+    function renderDictionary(data) {
+      tableBody.innerHTML = "";
+
+      data.forEach(item => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+          <td><strong>${item.concept}</strong></td>
+          <td>${item.definition}</td>
+          <td>
+            ${
+              item.videoUrl
+                ? `<a href="${item.videoUrl}" target="_blank">${item.videoTitle}</a>`
+                : "-"
+            }
+          </td>
+          <td>${item.comment}</td>
+        `;
+
+        tableBody.appendChild(row);
+      });
+    }
+
+    function filterDictionary() {
+      const searchText = searchInput.value.toLowerCase();
+
+      const filteredData = dictionaryData.filter(item => {
+        return (
+          item.concept.toLowerCase().includes(searchText) ||
+          item.definition.toLowerCase().includes(searchText) ||
+          item.videoTitle.toLowerCase().includes(searchText) ||
+          item.comment.toLowerCase().includes(searchText)
+        );
+      });
+
+      renderDictionary(filteredData);
+    }
+
+    searchInput.addEventListener("input", filterDictionary);
+
+    renderDictionary(dictionaryData);
+  </script>
+
+</body>
+</html>
