@@ -30,7 +30,7 @@ const dictionaryData = [
 	  videoTitle: "Episodio 1",
 	  videoUrl: "https://youtu.be/IVkVVSHNs18?t=413",
 	  comment: "En este contexto, la variable binaria transforma una pregunta de mercado en una respuesta medible: ocurrió o no ocurrió."
-	}
+	},
 	
 // Episodio 2 
 	{
