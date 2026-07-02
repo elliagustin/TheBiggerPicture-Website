@@ -26,10 +26,10 @@ const dictionaryData = [
 	},
 	{
 	  concept: "Variable Binaria",
-	  definition: "Una variable binaria es una variable que solo puede tener dos valores posibles. En este proyecto, la usamos para representar si algo ocurrió o no ocurrió. Por ejemplo: si el precio llegó al Take Profit dentro del período analizado, la variable puede valer 1. Si no llegó, puede valer 0. Esto permite transformar un resultado de mercado en algo que un modelo de machine learning pueda aprender como una respuesta clara: sí o no.",
+	  definition: "Una variable binaria es una variable que solo puede tomar dos valores posibles, generalmente 0 y 1. En este proyecto, la utilizamos para representar si una condición específica se cumple o no se cumple. Por ejemplo, si el precio alcanza el Take Profit dentro del período analizado, la variable toma el valor 1; si no lo alcanza, toma el valor 0. Esto permite convertir un evento del mercado en una salida clara y estructurada para entrenar y evaluar un modelo de machine learning.",
 	  videoTitle: "Episodio 1",
 	  videoUrl: "https://youtu.be/IVkVVSHNs18?t=413",
-	  comment: "En trading, una variable binaria sirve para convertir una pregunta compleja del mercado en una respuesta simple: ocurrió o no ocurrió."
+	  comment: "En este contexto, la variable binaria transforma una pregunta de mercado en una respuesta medible: ocurrió o no ocurrió."
 	}
 	
 // Episodio 2 
