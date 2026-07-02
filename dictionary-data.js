@@ -61,5 +61,8 @@ const dictionaryData = [
 				En simple: antes de confiar en los resultados, necesito confirmar que el timeframe menor reconstruye correctamente el timeframe mayor.`
 	}
 // Episodio 3
+// Episodio 4
+// Episodio 5
+// Episodio 6
 	
 ];
